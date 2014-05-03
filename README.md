@@ -11,6 +11,5 @@ fdisk /dev/sdX
 
 mkfs.vfat -F32 -n NAMEKEY /dev/sdX1
 
-Launchscript 
-./Generate.sh NAMEKEY
+./Generate.sh NAMEKEY (or basename mountpoint)
 
