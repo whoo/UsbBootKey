@@ -9,6 +9,7 @@ You need to format your usbKey.
 fdisk /dev/sdX
 [n1w]
 
+echo "np1\n\n\n\n\nw" | fdisk /dev/sdg
 mkfs.vfat -F32 -n NAMEKEY /dev/sdX1
 
 ./Generate.sh NAMEKEY (or basename mountpoint)

@@ -6,12 +6,14 @@
 if [  "x$1" = "x" ]
 then
 echo "Need a key name"
+exit
 fi
 
 NAME=$1
 DEST=$(mount |grep $NAME | awk  	 '{print $3}')
 DISK=$(mount |grep $NAME | awk -F'[0-9]' '{print $1}')
 echo "Please check !"
+mount | grep vfat
 echo "Transform $DISK $NAME en clef bootable $DEST" 
 read
 
@@ -30,15 +32,17 @@ wget -c 'http://downloads.sourceforge.net/project/dban/dban/dban-2.2.8/dban-2.2.
 wget -c 'http://distro.ibiblio.org/tinycorelinux/5.x/x86/release/TinyCore-current.iso' -O tinycore.iso
 #Gentoo
 wget -c 'http://distfiles.gentoo.org/releases/x86/autobuilds/current-install-x86-minimal/install-x86-minimal-20140415.iso' -O gentoo.iso
-cp -v *.iso ${DEST}
+wget -c 'http://www.memtest.org/download/5.01/memtest86+-5.01.bin.gz' -O memtest86.bin.gz
+zcat memtest86.bin.gz > memtest86.bin
+cp -v *.iso *.bin ${DEST}
 popd
 
 # Grub
 ########
 if [ `which grub2-install`  ]
 then
-grub2-install --boot-directory=${DEST} ${DISK}
-cp grub.cfg ${DEST}/grub
+	grub2-install --boot-directory=${DEST} ${DISK}
+	cp grub.cfg ${DEST}/grub
 else
-echo "Grub not found :'"
+	echo "Grub not found :'"
 fi
