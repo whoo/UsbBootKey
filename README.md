@@ -10,6 +10,7 @@ Gentoo minimal-install 	> http://distfiles.gentoo.org/releases/x86/autobuilds/cu
 You need to format your usbKey.
 
 echo "np1\n\n\n\n\nw" | fdisk /dev/sdX
+
 mkfs.vfat -F32 -n NAMEKEY /dev/sdX1
 
 ./Generate.sh NAMEKEY (or basename mountpoint)
