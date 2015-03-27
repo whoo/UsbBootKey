@@ -1,0 +1,10 @@
+Gentoo;http://distfiles.gentoo.org/releases/x86/autobuilds/current-install-x86-minimal/;install-x86-minimal-.*.iso
+Gentoo64;http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/;install-amd64-minimal-.*.iso
+TinyCore;http://distro.ibiblio.org/tinycorelinux/6.x/x86/release/Core-current.iso
+TinyCore64;http://distro.ibiblio.org/tinycorelinux/6.x/x86_64/release/CorePure64-6.1.iso
+Dsl;http://distro.ibiblio.org/damnsmall/current/current.iso
+MemTest;http://www.memtest.org/download/5.01/memtest86+-5.01.bin
+Dban;http://sourceforge.net/projects/dban/files/latest/download
+Debian;http://ftp.ca.debian.org/debian/dists/testing/main/installer-i386/current/images/netboot/mini.iso
+Debian64;http://ftp.ca.debian.org/debian/dists/testing/main/installer-amd64/current/images/netboot/mini.iso
+Gparted;http://sourceforge.net/projects/gparted/files/latest/download

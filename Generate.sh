@@ -20,6 +20,8 @@ read
 ##########################
 # Get distrib
 ########
+function Download()
+{
 mkdir -p tmp
 pushd tmp
 #Debian 
@@ -35,6 +37,11 @@ wget -c 'http://distfiles.gentoo.org/releases/x86/autobuilds/current-install-x86
 wget -c 'http://www.memtest.org/download/5.01/memtest86+-5.01.bin.gz' -O memtest86.bin.gz
 zcat memtest86.bin.gz > memtest86.bin
 wget -c "http://distro.ibiblio.org/tinycorelinux/6.x/x86_64/release/CorePure64-6.0.iso" -O tinycore64.iso
+popd
+}
+
+
+pushd tmp
 cp -v *.iso *.bin ${DEST}
 popd
 
@@ -47,3 +54,4 @@ then
 else
 	echo "Grub not found :'"
 fi
+
