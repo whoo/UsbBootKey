@@ -15,6 +15,7 @@ echo "np1\n\n\n\n\nw" | fdisk /dev/sdX
 mkfs.vfat -F32 -n NAMEKEY /dev/sdX1
 
 ./Download.py (to generate bash script for download)
+
 ./Generate.sh NAMEKEY (or basename mountpoint)
 
 
